@@ -1,0 +1,34 @@
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#02040c;color:#eaf1ff;font-family:Arial,Helvetica,sans-serif}
+body{display:flex;justify-content:center;align-items:center;padding:20px}
+.game{position:relative;width:min(1100px,100%);overflow:hidden;background:#050814;border:1px solid #26304d;border-radius:20px;box-shadow:0 20px 80px #000}
+canvas{display:block;width:100%;aspect-ratio:16/9;background:#050814;touch-action:none}
+.hud{position:absolute;left:0;right:0;top:0;padding:14px;display:flex;justify-content:space-between;pointer-events:none}
+.left{display:flex;gap:8px;flex-wrap:wrap}
+.panel{background:#080e20d9;border:1px solid #2a3858;border-radius:10px;padding:8px 11px;min-width:90px}
+.panel span{display:block;font-size:9px;color:#8d9abb;letter-spacing:1px}
+.panel b{font-size:16px}
+.bar{width:120px;height:6px;background:#1b2338;border-radius:20px;margin-top:6px;overflow:hidden}
+#hpBar{display:block;width:100%;height:100%;background:#62e6ff}
+.center{text-align:center;margin:auto}
+#wave{color:#62e6ff;letter-spacing:2px}
+#bossLabel{display:none;color:#ff557b;font-size:12px}
+.overlay{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;background:#02050dcc;padding:20px}
+.hidden{display:none!important}
+.card{width:min(560px,95%);padding:30px;text-align:center;background:#090f21f5;border:1px solid #344466;border-radius:20px}
+h1{font-size:clamp(42px,8vw,78px);line-height:.86;margin:0 0 10px;letter-spacing:-4px}
+h2{font-size:34px;margin:0 0 8px}
+.card p{color:#8d9abb}
+button{border:1px solid #496080;background:#121c35;color:#eaf1ff;border-radius:12px;padding:13px 20px;font-weight:800;cursor:pointer;min-height:46px}
+button:hover{filter:brightness(1.15)}
+#startBtn,#restartBtn{background:#62e6ff;color:#031017;border-color:#62e6ff}
+.card small{display:block;margin-top:18px;color:#7f8baa}
+#upgradeGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.upgrade{min-height:125px;text-align:left;background:#10182d}
+.upgrade strong{display:block;margin-bottom:8px}
+.upgrade span{font-size:12px;color:#8d9abb}
+footer{padding:9px;text-align:center;color:#53617e;font-size:10px;letter-spacing:2px}
+@media(max-width:650px){
+  body{padding:6px}.panel{min-width:68px;padding:6px}.bar{width:75px}
+  #upgradeGrid{grid-template-columns:1fr}
+}

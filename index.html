@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NEON ECLIPSE: ZERO HOUR</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="game">
+  <canvas id="gameCanvas"></canvas>
+  <div class="hud">
+    <div class="left">
+      <div class="panel"><span>HULL</span><div class="bar"><i id="hpBar"></i></div></div>
+      <div class="panel"><span>SCORE</span><b id="score">0</b></div>
+      <div class="panel"><span>CREDITS</span><b id="credits">0</b></div>
+    </div>
+    <div class="center">
+      <b id="wave">WAVE 1</b>
+      <strong id="bossLabel">BOSS INCOMING</strong>
+    </div>
+  </div>
+
+  <section id="menu" class="overlay">
+    <div class="card">
+      <h1>NEON<br>ECLIPSE</h1>
+      <p>ZERO HOUR</p>
+      <button id="startBtn">START MISSION</button>
+      <small>WASD / Arrow Keys · Mouse Aim · Click / Space Fire · Shift Dash</small>
+    </div>
+  </section>
+
+  <section id="upgrade" class="overlay hidden">
+    <div class="card">
+      <h2>SYSTEM UPGRADE</h2>
+      <p>Choose one upgrade.</p>
+      <div id="upgradeGrid"></div>
+    </div>
+  </section>
+
+  <section id="gameOver" class="overlay hidden">
+    <div class="card">
+      <h2>MISSION FAILED</h2>
+      <p id="finalText"></p>
+      <button id="restartBtn">RESTART</button>
+    </div>
+  </section>
+
+  <footer>NEON ECLIPSE · HTML5 GAME</footer>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
